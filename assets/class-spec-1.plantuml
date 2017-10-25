@@ -24,22 +24,22 @@ package de.fhro.inf.prg3.a04.collections {
         }
 
         class SimpleListImpl<T> implements SimpleList {
-           -head: Element
+           -head: ListElement
         }
 
-        class SimpleIteratorImpl implements Iterator {
+        class SimpleIterator implements Iterator {
         }
 
-        -class Element<T> {
+        -class ListElement<T> {
             -item: T
-            -next: Element<T>
+            -next: ListElement<T>
     
             +getItem(): T
-            +getNext(): Element<T>
-            +setNext(e: Element<T>)
+            +getNext(): ListElement<T>
+            +setNext(e: ListElement<T>)
         }
 
-        SimpleListImpl +-- Element
-        Element --* SimpleListImpl
+        SimpleListImpl +-- ListElement
+        ListElement --* SimpleListImpl
     }
 @enduml
